@@ -1,0 +1,23 @@
+.list-card {
+    margin: 10px 10rem;
+}
+
+.list-container{
+    text-align: right;
+
+    .mat-row {
+        transition: 0.1s;
+        &:hover{
+            background-color: #39b54a21;
+        }
+    }
+}
+
+.mat-card-header {
+    display: block;
+    text-align: center;
+}
+
+.mat-row:hover {
+    cursor: pointer;
+}

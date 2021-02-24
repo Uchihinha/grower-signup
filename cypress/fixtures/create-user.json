@@ -1,0 +1,13 @@
+{
+    "name": "Gabriel Jorge Pereira",
+    "address": "Rua Carlos Smith",
+    "phone_number": "+55 15 991055128",
+    "gender": "Male",
+    "batchs_handled": "2",
+    "yield_acquired": "123123",
+    "greenhouse_locations": [
+        "Toronto",
+        "Vancouver"
+    ],
+    "type": "Grower"
+}

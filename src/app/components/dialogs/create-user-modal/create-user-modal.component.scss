@@ -1,0 +1,18 @@
+.create-user-dialog{
+    min-height: 534.5px;
+    
+    .mat-card-header {
+        display: block;
+        text-align: center;
+    }
+
+    .input {
+        width: 100%;
+    }
+
+    .mat-card-footer {
+        .row {
+            text-align: right;
+        }
+    }
+}

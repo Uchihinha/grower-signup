@@ -1,0 +1,5 @@
+<mat-form-field class="field">
+  <mat-label>{{ label }}</mat-label>
+  <input [specialCharacters]="specialCharacters" [mask]="mask" matInput [formControlName]="controlName" [placeholder]="placeholder">
+  <mat-error *ngIf="errorMessage != ''">{{ errorMessage }}</mat-error>
+</mat-form-field>

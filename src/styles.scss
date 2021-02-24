@@ -1,0 +1,53 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$grower-palette: (
+    50 : #e7f6e9,
+    100 : #c4e9c9,
+    200 : #9cdaa5,
+    300 : #74cb80,
+    400 : #57c065,
+    500 : #39b54a,
+    600 : #33ae43,
+    700 : #2ca53a,
+    800 : #249d32,
+    900 : #178d22,
+    A100 : #c3ffc8,
+    A200 : #90ff99,
+    A400 : #5dff6a,
+    A700 : #44ff52,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #ffffff,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$primary: mat-palette($grower-palette);
+$accent: mat-palette($grower-palette, A200, A100, A400);
+$my-app-theme: mat-light-theme($primary, $accent);
+
+@include angular-material-theme($my-app-theme);
+
+body {
+    background-color: #39b54a4d;
+}
+
+.error {
+    background: #f44336;
+
+    .mat-simple-snackbar-action, &{
+        color: white;
+    }
+}

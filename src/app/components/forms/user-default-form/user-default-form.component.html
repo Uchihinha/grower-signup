@@ -1,0 +1,33 @@
+<form class="form" [formGroup]="userForm" (submit)="save()">
+  <app-select-input [label]="'Employee Type'" [controlName]="'type'" [options]="availableTypes" [errorMessage]="getErrorMessage('type')"></app-select-input>
+
+  <app-text-input [label]="'Name'" [controlName]="'name'" [errorMessage]="getErrorMessage('name')" [placeholder]="'Gabriel Jorge'"></app-text-input>
+
+  <app-text-input [label]="'Address'" [controlName]="'address'" [errorMessage]="getErrorMessage('address')" [placeholder]="'Carlos Smith, 10'"></app-text-input>
+
+  <app-text-input [label]="'Phone Number'" mask="(00) 0 0000-0000" [controlName]="'phone_number'" [errorMessage]="getErrorMessage('phone_number')" [placeholder]="'+55 15 991055128'"></app-text-input>
+
+  <app-select-input [label]="'Gender'" [controlName]="'gender'" [options]="genders" [errorMessage]="getErrorMessage('gender')"></app-select-input>
+
+  <ng-container *ngIf="userForm.controls.type.value === 'Grower'">
+    <app-text-input mask="9999" [label]="'Batchs Handled'" [controlName]="'batchs_handled'" [errorMessage]="getErrorMessage('batchs_handled')" [placeholder]="'10'"></app-text-input>
+
+    <app-text-input mask="9999" [label]="'Yield Acquired (kg)'" [controlName]="'yield_acquired'" [errorMessage]="getErrorMessage('yield_acquired')" [placeholder]="'10'"></app-text-input>
+
+    <app-select-input [label]="'Greenhouse Locations'" [controlName]="'greenhouse_locations'" [options]="locations" [errorMessage]="getErrorMessage('greenhouse_locations')" [multiple]="true"></app-select-input>
+  </ng-container>
+
+  <ng-container *ngIf="userForm.controls.type.value === 'Warehouse'">
+    <app-text-input [label]="'Years Experience'" mask="9999" [controlName]="'years_experience'" [errorMessage]="getErrorMessage('years_experience')" [placeholder]="'3'"></app-text-input>
+
+    <app-text-input mask="S*" [label]="'Education Qualification'" [controlName]="'education_qualification'" [errorMessage]="getErrorMessage('education_qualification')" [placeholder]="'College'"></app-text-input>
+
+    <app-checkbox-input [label]="'Inventory Management Certification'" [controlName]="'inventory_management_certification'" [errorMessage]="getErrorMessage('inventory_management_certification')" [placeholder]="'3'"></app-checkbox-input>
+  </ng-container>
+
+  <div class="form-footer">
+    <button (click)="cancel(); false" mat-raised-button>Back</button>
+    <button type="submit" color="primary" mat-raised-button>Save</button>
+  </div>
+
+</form>

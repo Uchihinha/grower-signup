@@ -1,0 +1,10 @@
+{
+  "baseUrl": "http://localhost:4200",
+  "experimentalNetworkStubbing": true,
+  "testFiles": [
+    "Custom/list-user.spec.js",
+    "Custom/create-user.spec.js",
+    "Custom/edit-user.spec.js",
+    "Custom/delete-user.spec.js"
+  ]
+}

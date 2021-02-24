@@ -1,0 +1,10 @@
+<h2 mat-dialog-title>Are you sure?</h2>
+
+<mat-dialog-content class="mat-typography">
+  Do you really want to delete it?
+</mat-dialog-content>
+
+<div mat-dialog-actions>
+  <button mat-raised-button type="button" (click)="decline()">Cancel</button>
+  <button mat-raised-button type="button" color="warn" (click)="accept()">Delete</button>
+</div>

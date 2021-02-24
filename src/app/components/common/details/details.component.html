@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>User #{{id}} <fa-icon *ngIf="user && !isLoading" class="delete-icon" (click)="delete()" [icon]="faTrash"></fa-icon></mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+
+    <app-user-default-form *ngIf="user" [data]="user" (cancelButtonClick)="back()" (saveButtonClick)="save($event)"></app-user-default-form>
+
+    <p class="not-found" *ngIf="!user && !isLoading">Oops, content not found!<br>Go to <a href="/">Home Page</a></p>
+    
+  </mat-card-content>
+
+</mat-card>
